@@ -1,0 +1,111 @@
+/* Hace que los tamaños sean más fáciles de controlar */
+* {
+    box-sizing: border-box;
+}
+
+/* Diseño general de la página */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #fff4f8;
+    color: #4d3340;
+}
+
+/* Cabecera del juego */
+.app-header {
+    padding: 24px;
+    text-align: center;
+    background-color: #f7c6d9;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.app-header p {
+    margin-bottom: 0;
+}
+
+/* Contenedor principal */
+.game-container {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    gap: 24px;
+
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Tarjetas principales */
+.wardrobe,
+.dressing-room,
+.game-actions {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(77, 51, 64, 0.1);
+}
+
+/* Títulos de las secciones */
+.wardrobe h2,
+.dressing-room h2,
+.game-actions h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Botones */
+button {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #ef9fbd;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e887ad;
+    transform: scale(1.03);
+}
+
+/* Zona central */
+.dressing-room {
+    min-height: 500px;
+    text-align: center;
+}
+
+/* Maniquí provisional */
+.mannequin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 380px;
+    margin-top: 20px;
+
+    border: 3px dashed #f3bdd2;
+    border-radius: 20px;
+    background-color: #fff9fb;
+}
+
+.mannequin-icon {
+    font-size: 120px;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 800px) {
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+}
