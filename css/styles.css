@@ -80,27 +80,67 @@ button:hover {
 
 /* Zona central */
 .dressing-room {
-    min-height: 500px;
+    min-height: 750px;
     text-align: center;
 }
 
-/* Maniquí provisional */
+/* Zona donde se superponen el cuerpo y las prendas */
 .mannequin {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 
-    min-height: 380px;
-    margin-top: 20px;
+    width: 260px;
+    height: 650px;
+
+    margin: 20px auto 0;
 
     border: 3px dashed #f3bdd2;
-    border-radius: 20px;
+    border-radius: 24px;
     background-color: #fff9fb;
+
+    overflow: hidden;
 }
 
-.mannequin-icon {
-    font-size: 120px;
+/* Todas las imágenes usan exactamente el mismo espacio */
+.mannequin-layer {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+/* El cuerpo queda en la capa inferior */
+.mannequin-base {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Las prendas quedan encima del cuerpo */
+#bottom-layer {
+    z-index: 2;
+}
+
+#top-layer {
+    z-index: 3;
+}
+
+#shoes-layer {
+    z-index: 4;
+}
+
+#accessory-layer {
+    z-index: 5;
+}
+
+/* Evita que las prendas interfieran con los clics */
+.clothing-layer {
+    pointer-events: none;
 }
 
 /* Adaptación para pantallas pequeñas */
