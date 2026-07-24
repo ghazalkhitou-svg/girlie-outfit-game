@@ -31,10 +31,43 @@
         <section class="dressing-room">
             <h2>Tu outfit</h2>
 
-            <div class="mannequin">
-                <span class="mannequin-icon"></span>
-                <p>Maniquí provisional</p>
-            </div>
+        <div class="mannequin">
+            <!-- Cuerpo base -->
+            <img
+                class="mannequin-layer mannequin-base"
+                src="assets/mannequin/mannequin.png"
+                alt="Maniquí femenino"
+            >
+
+            <!-- Prendas que aparecerán encima -->
+            <img
+                id="bottom-layer"
+                class="mannequin-layer clothing-layer"
+                alt="Parte inferior seleccionada"
+                hidden
+            >
+
+            <img
+                id="top-layer"
+                class="mannequin-layer clothing-layer"
+                alt="Top seleccionado"
+                hidden
+            >
+
+            <img
+                id="shoes-layer"
+                class="mannequin-layer clothing-layer"
+                alt="Zapatos seleccionados"
+                hidden
+            >
+
+            <img
+                id="accessory-layer"
+                class="mannequin-layer clothing-layer"
+                alt="Accesorio seleccionado"
+                hidden
+            >
+        </div>
         </section>
 
         <aside class="game-actions">
