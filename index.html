@@ -22,10 +22,43 @@
         <aside class="wardrobe">
             <h2>Armario</h2>
 
-            <button type="button">Tops</button>
-            <button type="button">Bottoms</button>
-            <button type="button">Zapatos</button>
-            <button type="button">Accesorios</button>
+            <div class="wardrobe-categories">
+                <button
+                    type="button"
+                    class="category-button active"
+                    data-category="tops"
+                >
+                    Tops
+                </button>
+
+                <button
+                    type="button"
+                    class="category-button"
+                    data-category="bottoms"
+                >
+                    Bottoms
+                </button>
+
+                <button
+                    type="button"
+                    class="category-button"
+                    data-category="shoes"
+                >
+                    Zapatos
+                </button>
+
+                <button
+                    type="button"
+                    class="category-button"
+                    data-category="accessories"
+                >
+                    Accesorios
+                </button>
+            </div>
+
+            <div id="wardrobe-items" class="wardrobe-items">
+                <p>Selecciona una categoría</p>
+            </div>
         </aside>
 
         <section class="dressing-room">
@@ -37,6 +70,10 @@
                 src="assets/mannequin/mannequin.png"
                 alt="Maniquí femenino"
             >
+                <img id="bottoms-layer" class="outfit-layer" alt="" hidden>
+                <img id="tops-layer" class="outfit-layer" alt="" hidden>
+                <img id="shoes-layer" class="outfit-layer" alt="" hidden>
+                <img id="accessories-layer" class="outfit-layer" alt="" hidden>
         </div>
         </section>
 
@@ -53,7 +90,7 @@
         </aside>
 
     </main>
-
+    <script src="js/outfit-data.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
