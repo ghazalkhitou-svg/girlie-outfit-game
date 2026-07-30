@@ -88,9 +88,7 @@ button:hover {
 .mannequin {
     position: relative;
 
-    width: 260px;
-    height: 650px;
-
+    width: 245px;
     margin: 20px auto 0;
 
     border: 3px dashed #f3bdd2;
@@ -148,4 +146,36 @@ button:hover {
     .game-container {
         grid-template-columns: 1fr;
     }
+}
+
+.mannequin-base {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.category-button.active {
+    background-color: #c54d97;
+    font-weight: bold;
+}
+
+.outfit-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    pointer-events: none;
+}
+#tops-layer {
+    width: 60%;
+    top: 8%;
+    left: 20%;
+}
+#bottoms-layer
+{
+    width: 60%;
+    top: 30%;
+    left: 20%;
 }
